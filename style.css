@@ -1,5 +1,9 @@
 #style.css
 
+* {
+  color: inherit;
+}
+
 /* Global Layout */
 body {
   font-family: 'Inter', sans-serif;
