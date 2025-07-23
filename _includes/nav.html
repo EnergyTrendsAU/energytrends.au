@@ -1,0 +1,22 @@
+<nav class="nav">
+  <ul>
+    {% unless page.url == "/" %}
+      <li><a href="/">Home</a></li>
+    {% endunless %}
+    {% unless page.url == "/cost-estimator.html" %}
+      <li><a href="/cost-estimator.html">Cost Estimator</a></li>
+    {% endunless %}
+    {% unless page.url == "/energy-pulse.html" %}
+      <li><a href="/energy-pulse.html">Energy Pulse</a></li>
+    {% endunless %}
+    {% unless page.url == "/faq.html" %}
+      <li><a href="/faq.html">FAQs</a></li>
+    {% endunless %}
+    {% unless page.url == "/legals.html" %}
+      <li><a href="/legals.html">Legals</a></li>
+    {% endunless %}
+    {% unless page.url == "/contact.html" %}
+      <li><a href="/contact.html">Contact</a></li>
+    {% endunless %}
+  </ul>
+</nav>
