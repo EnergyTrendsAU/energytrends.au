@@ -1,22 +1,28 @@
+#style.css
+
+/* Global Layout */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
   background-color: #0A2342;
   color: #ffffff;
-}
-
-.hero {
-  padding: 2rem;
-  background-color: #0A2342;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 main {
   padding: 2rem;
+  max-width: 960px;
+  margin: auto;
   background-color: #111827;
 }
 
+h1, h2, h3 {
+  color: #5BC0BE;
+  margin-bottom: 0.5rem;
+}
+
+/* Link Styling */
 a {
   color: #5BC0BE;
   text-decoration: none;
@@ -24,7 +30,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #FF595E;
 }
+
+/* Navigation Bar */
 .nav {
   background-color: #111827;
   padding: 1rem;
@@ -51,6 +60,15 @@ a:hover {
 .nav a:hover {
   color: #FF595E;
 }
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  background-color: #0A2342;
+  text-align: center;
+}
+
+/* CTA Buttons */
 .cta-buttons {
   margin-top: 1rem;
 }
@@ -71,6 +89,7 @@ a:hover {
   color: #ffffff;
 }
 
+/* Tool Cards */
 .tool-card {
   background-color: #1F2937;
   padding: 1rem;
@@ -78,7 +97,34 @@ a:hover {
   border-radius: 6px;
 }
 
+/* Footer CTA Section */
 .footer-cta {
   margin-top: 2rem;
   text-align: center;
+}
+
+/* Footer Styling */
+.site-footer {
+  background-color: #0A2342;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #5BC0BE;
+}
+
+.site-footer a {
+  color: #5BC0BE;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.site-footer a:hover {
+  color: #FF595E;
+}
+
+.footer-note {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #94a3b8;
 }
