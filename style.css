@@ -4,6 +4,10 @@
   color: inherit;
 }
 
+main {
+  color: #ffffff;
+}
+
 section {
   background-color: #111827;
   color: #ffffff;
