@@ -169,3 +169,14 @@ a:hover {
 .contact-form textarea:focus {
   outline: 2px solid #5BC0BE;
 }
+
+.nav-brand img {
+  height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.footer-logo img {
+  height: 32px;
+  max-width: 100%;
+  opacity: 0.8;
+}
