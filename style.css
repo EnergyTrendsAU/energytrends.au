@@ -197,3 +197,24 @@ a:hover {
 .contact-form textarea:focus {
   outline: 2px solid #5BC0BE;
 }
+
+/* === CTA BUTTON UNIVERSAL STYLING === */
+.cta {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #5BC0BE;
+  color: #0A2342;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #FF595E;
+  color: #ffffff;
+}
