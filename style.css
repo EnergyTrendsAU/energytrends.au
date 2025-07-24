@@ -1,21 +1,8 @@
-#style.css
-
+/* === GLOBAL RESETS & BASE === */
 * {
   color: inherit;
 }
 
-main {
-  color: #ffffff;
-}
-
-section {
-  background-color: #111827;
-  color: #ffffff;
-  padding: 1rem;
-  border-radius: 6px;
-}
-
-/* Global Layout */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -30,6 +17,14 @@ main {
   max-width: 960px;
   margin: auto;
   background-color: #111827;
+  color: #ffffff;
+}
+
+section {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
 }
 
 h1, h2, h3 {
@@ -37,7 +32,7 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Link Styling */
+/* === LINK STYLING === */
 a {
   color: #5BC0BE;
   text-decoration: none;
@@ -48,7 +43,7 @@ a:hover {
   color: #FF595E;
 }
 
-/* Navigation Bar */
+/* === NAVIGATION === */
 .nav {
   background-color: #111827;
   padding: 1rem;
@@ -76,35 +71,64 @@ a:hover {
   color: #FF595E;
 }
 
-/* Hero Section */
+.nav-brand img {
+  height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* === HERO SECTION === */
 .hero {
   padding: 2rem;
   background-color: #0A2342;
   text-align: center;
 }
 
-/* CTA Buttons */
+/* === STACKED CTA BUTTONS === */
 .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
 
-.cta {
-  display: inline-block;
-  margin: 0.5rem;
+.stacked-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0.75rem 1.25rem;
   background-color: #5BC0BE;
   color: #0A2342;
-  font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
+  line-height: 1.2;
+  width: 180px;
+  min-width: 180px;
+  max-width: 100%;
+  margin: 0.5rem;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.cta:hover {
+.stacked-text:hover {
   background-color: #FF595E;
   color: #ffffff;
 }
 
-/* Tool Cards */
+.stacked-text .cta-top {
+  font-weight: normal;
+  font-size: 0.85rem;
+}
+
+.stacked-text .cta-bottom {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.15rem;
+}
+
+/* === TOOL CARDS === */
 .tool-card {
   background-color: #1F2937;
   padding: 1rem;
@@ -112,13 +136,12 @@ a:hover {
   border-radius: 6px;
 }
 
-/* Footer CTA Section */
+/* === FOOTER === */
 .footer-cta {
   margin-top: 2rem;
   text-align: center;
 }
 
-/* Footer Styling */
 .site-footer {
   background-color: #0A2342;
   color: #ffffff;
@@ -144,8 +167,13 @@ a:hover {
   color: #94a3b8;
 }
 
-/* Contact Form Styling */
+.footer-logo img {
+  height: 32px;
+  max-width: 100%;
+  opacity: 0.8;
+}
 
+/* === CONTACT FORM === */
 .contact-form {
   background-color: #1F2937;
   padding: 2rem;
@@ -168,85 +196,4 @@ a:hover {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: 2px solid #5BC0BE;
-}
-
-.nav-brand img {
-  height: 40px;
-  max-width: 100%;
-  object-fit: contain;
-}
-.footer-logo img {
-  height: 32px;
-  max-width: 100%;
-  opacity: 0.8;
-}
-
-/* Stacked CTA Button Text */
-.stacked-text {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.25rem;
-  background-color: #5BC0BE;
-  color: #0A2342;
-  border-radius: 5px;
-  text-decoration: none;
-  margin: 0.5rem;
-  line-height: 1.2;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.stacked-text:hover {
-  background-color: #FF595E;
-  color: #ffffff;
-}
-
-.stacked-text .cta-top {
-  font-weight: normal;
-  font-size: 0.85rem;
-}
-
-.stacked-text .cta-bottom {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 0.15rem;
-}
-
-/* Force uniform CTA button width */
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.stacked-text {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 0.75rem 1.25rem;
-  background-color: #5BC0BE;
-  color: #0A2342;
-  border-radius: 5px;
-  line-height: 1.2;
-  width: 160px; /* set to widest button or desired fixed width */
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.stacked-text:hover {
-  background-color: #FF595E;
-  color: #ffffff;
-}
-
-.stacked-text .cta-top {
-  font-weight: normal;
-  font-size: 0.85rem;
-}
-
-.stacked-text .cta-bottom {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 0.15rem;
 }
