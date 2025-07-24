@@ -1,0 +1,13 @@
+- id: estimate
+  name: Estimate
+  url: /estimate.html
+  status: live
+  description: >
+    Simplifying energy cost planning with precision and purpose. Built for confidence, not speculation.
+
+- id: pulse
+  name: Pulse
+  url: /pulse.html
+  status: coming_soon
+  description: >
+    Strategic signal support for procurement timing. More than just the best-price-on-the-day.
