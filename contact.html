@@ -10,8 +10,15 @@ permalink: /contact.html
     <p>Let’s talk energy strategy. Reach out below and we’ll be in touch.</p>
   </header>
 
-  <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/contact-success.html">
+  <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify-recaptcha="true" action="/contact-success.html">
     <input type="hidden" name="form-name" value="contact" />
+
+    <!-- Honeypot -->
+    <p style="display:none;">
+      <label>Don’t fill this out if you’re human:
+        <input name="bot-field" />
+      </label>
+    </p>
 
     <label for="name">Name</label><br />
     <input type="text" id="name" name="name" required /><br /><br />
@@ -22,6 +29,28 @@ permalink: /contact.html
     <label for="message">Message</label><br />
     <textarea id="message" name="message" rows="6" required></textarea><br /><br />
 
-    <button type="submit" class="cta">Send Message</button>
+    <!-- reCAPTCHA -->
+    <div data-netlify-recaptcha="true"></div><br />
+
+    <!-- Modal-trigger button -->
+    <button type="button" onclick="showModal()" class="cta">Send Message</button>
   </form>
 </section>
+
+<!-- Confirmation Modal -->
+<div id="confirmation-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); text-align:center; padding-top:20%;">
+  <div style="background:#1F2937; color:#fff; padding:2rem; border-radius:6px; display:inline-block;">
+    <p>Confirm you’re ready to submit your message.</p>
+    <button onclick="document.querySelector('form').submit()" class="cta">Confirm & Send</button>
+    <button onclick="hideModal()" class="cta" style="background:#374151;">Cancel</button>
+  </div>
+</div>
+
+<script>
+function showModal() {
+  document.getElementById('confirmation-modal').style.display = 'block';
+}
+function hideModal() {
+  document.getElementById('confirmation-modal').style.display = 'none';
+}
+</script>
