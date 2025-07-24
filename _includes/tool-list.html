@@ -1,0 +1,8 @@
+{% for tool in site.data.tools %}
+  <div class="tool-card">
+    <h3>
+      <a href="{{ tool.url }}">{{ tool.name }}{% if tool.status == "coming_soon" %} (Coming Soon){% endif %}</a>
+    </h3>
+    <p>{{ tool.description }}</p>
+  </div>
+{% endfor %}
