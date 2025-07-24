@@ -180,3 +180,35 @@ a:hover {
   max-width: 100%;
   opacity: 0.8;
 }
+
+/* Stacked CTA Button Text */
+.stacked-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  background-color: #5BC0BE;
+  color: #0A2342;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0.5rem;
+  line-height: 1.2;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.stacked-text:hover {
+  background-color: #FF595E;
+  color: #ffffff;
+}
+
+.stacked-text .cta-top {
+  font-weight: normal;
+  font-size: 0.85rem;
+}
+
+.stacked-text .cta-bottom {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.15rem;
+}
