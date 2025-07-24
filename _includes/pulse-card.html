@@ -1,0 +1,13 @@
+<div class="card">
+  <h2><i>{{ include.title }}</i></h2>
+  <p>{{ include.subtitle }}</p>
+  <div class="data-display">{{ include.value }}</div>
+  <div class="trend {{ include.trend }}">
+    <i>{% if include.trend == "up" %}▲{% else %}▼{% endif %}</i> {{ include.change }} {% if include.trend == "up" %}increase{% else %}decrease{% endif %} from yesterday
+  </div>
+  <div class="chart">
+    <svg viewBox="0 0 300 100" class="chart-line">
+      <polyline points="0,80 50,40 100,70 150,30 200,60 250,20 300,50" />
+    </svg>
+  </div>
+</div>
