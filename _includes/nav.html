@@ -1,5 +1,11 @@
-<nav class="nav">
-  <ul>
+<nav class="nav" style="display: flex; align-items: center; justify-content: space-between;">
+  <div class="nav-brand">
+    <a href="/">
+      <img src="/assets/img/logo.png" alt="Energy Trends Australia logo" style="height: 40px; padding-top: 4px;" />
+    </a>
+  </div>
+
+  <ul style="display: flex; gap: 1rem;">
     {% unless page.url == "/" %}
       <li><a href="/">Home</a></li>
     {% endunless %}
