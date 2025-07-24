@@ -212,3 +212,41 @@ a:hover {
   font-size: 1.2rem;
   margin-top: 0.15rem;
 }
+
+/* Force uniform CTA button width */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stacked-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  background-color: #5BC0BE;
+  color: #0A2342;
+  border-radius: 5px;
+  line-height: 1.2;
+  width: 160px; /* set to widest button or desired fixed width */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.stacked-text:hover {
+  background-color: #FF595E;
+  color: #ffffff;
+}
+
+.stacked-text .cta-top {
+  font-weight: normal;
+  font-size: 0.85rem;
+}
+
+.stacked-text .cta-bottom {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.15rem;
+}
