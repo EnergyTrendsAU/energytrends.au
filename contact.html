@@ -11,20 +11,19 @@ permalink: /contact.html
   </header>
 
   <form id="contactForm" class="max-w-xl mx-auto space-y-6">
-    
     <div>
       <label for="name" class="block font-medium">Contact Name</label>
-      <input type="text" name="entry.2005620554" id="name" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <input type="text" name="entry.2005620554" id="name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
     </div>
 
     <div>
-      <label for="email" class="block font-medium">Preferred Email</label>
-      <input type="email" name="entry.1045781291" id="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <label for="email" class="block font-medium">Email</label>
+      <input type="email" name="entry.1045781291" id="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
     </div>
 
     <div>
       <label for="business" class="block font-medium">Business Name</label>
-      <input type="text" name="entry.1065046570" id="business" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <input type="text" name="entry.1065046570" id="business" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
     </div>
 
     <div>
@@ -34,7 +33,7 @@ permalink: /contact.html
 
     <div>
       <label for="interest" class="block font-medium">Tool Interest</label>
-      <select name="entry.839337160" id="interest" onchange="toggleMessage()" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900">
+      <select name="entry.839337160" id="interest" onchange="toggleMessage()" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900">
         <option value="">Select one</option>
         <option value="Estimate Only">Estimate Only</option>
         <option value="Pulse Only">Pulse Only</option>
@@ -50,7 +49,7 @@ permalink: /contact.html
 
     <div>
       <label class="flex items-start gap-2">
-        <input type="checkbox" name="entry.839337161" required class="mt-1" />
+        <input type="checkbox" name="entry.839337161" class="mt-1" />
         <span class="text-sm text-gray-700">
           By submitting this form, I consent to Energy Trends Australia collecting and using my personal information — including name, email, business name, ABN (if provided), and tool interests — to provide updates, marketing materials, and strategic product insights. My information will be securely stored and retained only as long as needed to deliver these services or until I withdraw consent. It won’t be shared with third parties except where legally required or with trusted service providers supporting Energy Trends communications. I understand I can access, correct, or withdraw my information at any time by contacting <a href="mailto:info@energytrends.au" class="text-indigo-600 underline">info@energytrends.au</a>. For privacy concerns, I may also contact the Office of the Australian Information Commissioner. Energy Trends Australia complies with the Australian Privacy Principles under the Privacy Act 1988.
         </span>
@@ -59,17 +58,15 @@ permalink: /contact.html
 
     <button type="submit" class="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">Submit</button>
   </form>
-</section>
 
-<!-- Confirmation Modal -->
-<div id="confirmationModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-  <div class="bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8 text-center">
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="hidden max-w-xl mx-auto text-center mt-12">
     <h2 class="text-2xl font-bold mb-4">Thanks for reaching out</h2>
     <p class="text-gray-700 mb-6">We’ve received your message and will be in touch shortly.</p>
     <a href="/" class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">Return to homepage</a>
     <p class="mt-6 italic text-slate-400">Built for clarity, control, and strategic foresight—even in follow-up.</p>
   </div>
-</div>
+</section>
 
 <script>
 function toggleMessage() {
@@ -90,7 +87,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     mode: 'no-cors'
   });
 
+  form.style.display = 'none';
   document.getElementById('confirmationModal').classList.remove('hidden');
-  form.reset();
 });
 </script>
