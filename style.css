@@ -257,3 +257,25 @@ a:hover {
   50% { transform: scaleX(1.4); }
   100% { transform: scaleX(1); }
 }
+
+/* === AMBIENT PULSE LOGIC === */
+
+@keyframes ambientPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 4px rgba(255, 89, 94, 0.3); }
+  50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(255, 89, 94, 0.6); }
+}
+
+@keyframes ambientEstimate {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 4px rgba(0, 153, 204, 0.3); }
+  50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(0, 153, 204, 0.6); }
+}
+
+.pulse-ambient {
+  animation: ambientPulse 2s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+.estimate-ambient {
+  animation: ambientEstimate 2s ease-in-out infinite;
+  border-radius: 6px;
+}
