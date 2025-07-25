@@ -6,20 +6,51 @@ permalink: /contact.html
 
 <section>
   <header class="hero">
-    <h1>Contact Us</h1>
-    <p>Let’s talk energy strategy. Reach out below and we’ll be in touch.</p>
+    <h1>Register Your Interest</h1>
+    <p>Let us know which tools you're interested in. We'll keep you updated as our platform evolves.</p>
   </header>
 
-  <div class="form-wrapper" style="max-width: 800px; margin: 0 auto;">
-    <iframe 
-      src="https://forms.gle/5A4BcSurUAAtSxtE9" 
-      width="100%" 
-      height="1000" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0" 
-      style="border: none; background: #f9fafb;">
-      Loading…
-    </iframe>
-  </div>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdOfOj3LxhDWms_M08yyNFzyhPbPGZ2XcPj8XX4F-H65P8PvA/formResponse" method="POST" target="_blank" style="max-width: 700px; margin: 0 auto;">
+    
+    <label for="name">Contact Name</label><br />
+    <input type="text" name="entry.2005620554" id="name" required /><br /><br />
+
+    <label for="email">Preferred Email</label><br />
+    <input type="email" name="entry.1045781291" id="email" required /><br /><br />
+
+    <label for="business">Business Name</label><br />
+    <input type="text" name="entry.1065046570" id="business" required /><br /><br />
+
+    <label for="abn">ABN (optional)</label><br />
+    <input type="text" name="entry.1166974658" id="abn" /><br /><br />
+
+    <label for="interest">Tool Interest</label><br />
+    <select name="entry.839337160" id="interest" onchange="toggleMessage()" required>
+      <option value="">Select one</option>
+      <option value="Estimate Only">Estimate Only</option>
+      <option value="Pulse Only">Pulse Only</option>
+      <option value="Estimate & Pulse">Estimate & Pulse</option>
+      <option value="Other">Other</option>
+    </select><br /><br />
+
+    <div id="otherMessage" style="display:none;">
+      <label for="message">Tell us more (max 500 characters)</label><br />
+      <textarea name="entry.1166974659" id="message" maxlength="500" rows="5"></textarea><br /><br />
+    </div>
+
+    <label>
+      <input type="checkbox" name="entry.839337161" required />
+      By submitting this form, I consent to Energy Trends Australia collecting and using my personal information — including name, email, business name, ABN (if provided), and tool interests — to provide updates, marketing materials, and strategic product insights. My information will be securely stored and retained only as long as needed to deliver these services or until I withdraw consent. It won’t be shared with third parties except where legally required or with trusted service providers supporting Energy Trends communications. I understand I can access, correct, or withdraw my information at any time by contacting info@energytrends.au. For privacy concerns, I may also contact the Office of the Australian Information Commissioner. Energy Trends Australia complies with the Australian Privacy Principles under the Privacy Act 1988.
+    </label><br /><br />
+
+    <button type="submit" class="cta">Submit</button>
+  </form>
 </section>
+
+<script>
+function toggleMessage() {
+  const interest = document.getElementById('interest');
+  const messageBox = document.getElementById('otherMessage');
+  messageBox.style.display = interest.value === 'Other' ? 'block' : 'none';
+}
+</script>
