@@ -13,22 +13,22 @@ permalink: /contact.html
   <form id="contactForm" class="max-w-xl mx-auto grid gap-6">
     <div>
       <label for="name" class="block font-medium">Contact Name</label>
-      <input type="text" name="entry.2005620554" id="name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <input type="text" name="entry.2005620554" id="name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Your name" />
     </div>
 
     <div>
       <label for="email" class="block font-medium">Email</label>
-      <input type="email" name="entry.1045781291" id="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <input type="email" name="entry.1045781291" id="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="you@example.com" />
     </div>
 
     <div>
       <label for="business" class="block font-medium">Business Name</label>
-      <input type="text" name="entry.1065046570" id="business" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <input type="text" name="entry.1065046570" id="business" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Your business" />
     </div>
 
     <div>
       <label for="abn" class="block font-medium">ABN (optional)</label>
-      <input type="text" name="entry.1166974658" id="abn" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+      <input type="text" name="entry.1166974658" id="abn" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="ABN" />
     </div>
 
     <div>
@@ -44,7 +44,7 @@ permalink: /contact.html
 
     <div id="otherMessage" style="display:none;">
       <label for="message" class="block font-medium">Tell us more (max 500 characters)</label>
-      <textarea name="entry.1166974659" id="message" maxlength="500" rows="5" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900"></textarea>
+      <textarea name="entry.1166974659" id="message" maxlength="500" rows="5" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Additional details..."></textarea>
     </div>
 
     <div>
@@ -57,7 +57,7 @@ permalink: /contact.html
     </div>
 
     <div class="cta-buttons">
-      <a href="#" class="cta stacked-text" onclick="document.getElementById('contactForm').submit(); return false;">
+      <a href="#" class="cta stacked-text" onclick="document.getElementById('contactForm').submit(); return false;" role="button" aria-label="Submit form">
         <span class="cta-top">Submit</span>
         <span class="cta-bottom estimate-ambient">Interest</span>
       </a>
@@ -79,6 +79,10 @@ function toggleMessage() {
   const messageBox = document.getElementById('otherMessage');
   messageBox.style.display = interest.value === 'Other' ? 'block' : 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('confirmationModal').classList.add('hidden');
+});
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
