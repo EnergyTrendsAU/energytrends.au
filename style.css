@@ -241,6 +241,30 @@ a:hover {
   border-radius: 6px;
 }
 
+/* === FORM INPUT VISIBILITY FIXES === */
+
+input,
+textarea,
+select {
+  color: #111 !important;
+  background-color: #fff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280; /* Tailwind's gray-500 */
+}
+
+/* Chrome autofill fix */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #111 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 .estimate-ambient {
   animation: ambientEstimate 2s ease-in-out infinite;
   border-radius: 6px;
