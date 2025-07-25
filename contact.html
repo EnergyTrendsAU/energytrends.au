@@ -4,48 +4,72 @@ title: Contact
 permalink: /contact.html
 ---
 
-<section>
-  <header class="hero">
-    <h1>Register Your Interest</h1>
-    <p>Let us know which tools you're interested in. We'll keep you updated as our platform evolves.</p>
+<section class="px-6 py-12 bg-white text-gray-800">
+  <header class="text-center mb-10">
+    <h1 class="text-3xl font-bold mb-2">Register Your Interest</h1>
+    <p class="text-lg text-gray-600">Let us know which tools you're interested in. We'll keep you updated as our platform evolves.</p>
   </header>
 
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdOfOj3LxhDWms_M08yyNFzyhPbPGZ2XcPj8XX4F-H65P8PvA/formResponse" method="POST" target="_blank" style="max-width: 700px; margin: 0 auto;">
+  <form id="contactForm" class="max-w-xl mx-auto space-y-6">
     
-    <label for="name">Contact Name</label><br />
-    <input type="text" name="entry.2005620554" id="name" required /><br /><br />
-
-    <label for="email">Preferred Email</label><br />
-    <input type="email" name="entry.1045781291" id="email" required /><br /><br />
-
-    <label for="business">Business Name</label><br />
-    <input type="text" name="entry.1065046570" id="business" required /><br /><br />
-
-    <label for="abn">ABN (optional)</label><br />
-    <input type="text" name="entry.1166974658" id="abn" /><br /><br />
-
-    <label for="interest">Tool Interest</label><br />
-    <select name="entry.839337160" id="interest" onchange="toggleMessage()" required>
-      <option value="">Select one</option>
-      <option value="Estimate Only">Estimate Only</option>
-      <option value="Pulse Only">Pulse Only</option>
-      <option value="Estimate & Pulse">Estimate & Pulse</option>
-      <option value="Other">Other</option>
-    </select><br /><br />
-
-    <div id="otherMessage" style="display:none;">
-      <label for="message">Tell us more (max 500 characters)</label><br />
-      <textarea name="entry.1166974659" id="message" maxlength="500" rows="5"></textarea><br /><br />
+    <div>
+      <label for="name" class="block font-medium">Contact Name</label>
+      <input type="text" name="entry.2005620554" id="name" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
     </div>
 
-    <label>
-      <input type="checkbox" name="entry.839337161" required />
-      By submitting this form, I consent to Energy Trends Australia collecting and using my personal information — including name, email, business name, ABN (if provided), and tool interests — to provide updates, marketing materials, and strategic product insights. My information will be securely stored and retained only as long as needed to deliver these services or until I withdraw consent. It won’t be shared with third parties except where legally required or with trusted service providers supporting Energy Trends communications. I understand I can access, correct, or withdraw my information at any time by contacting info@energytrends.au. For privacy concerns, I may also contact the Office of the Australian Information Commissioner. Energy Trends Australia complies with the Australian Privacy Principles under the Privacy Act 1988.
-    </label><br /><br />
+    <div>
+      <label for="email" class="block font-medium">Preferred Email</label>
+      <input type="email" name="entry.1045781291" id="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+    </div>
 
-    <button type="submit" class="cta">Submit</button>
+    <div>
+      <label for="business" class="block font-medium">Business Name</label>
+      <input type="text" name="entry.1065046570" id="business" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+    </div>
+
+    <div>
+      <label for="abn" class="block font-medium">ABN (optional)</label>
+      <input type="text" name="entry.1166974658" id="abn" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" />
+    </div>
+
+    <div>
+      <label for="interest" class="block font-medium">Tool Interest</label>
+      <select name="entry.839337160" id="interest" onchange="toggleMessage()" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900">
+        <option value="">Select one</option>
+        <option value="Estimate Only">Estimate Only</option>
+        <option value="Pulse Only">Pulse Only</option>
+        <option value="Estimate & Pulse">Estimate & Pulse</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div id="otherMessage" style="display:none;">
+      <label for="message" class="block font-medium">Tell us more (max 500 characters)</label>
+      <textarea name="entry.1166974659" id="message" maxlength="500" rows="5" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900"></textarea>
+    </div>
+
+    <div>
+      <label class="flex items-start gap-2">
+        <input type="checkbox" name="entry.839337161" required class="mt-1" />
+        <span class="text-sm text-gray-700">
+          By submitting this form, I consent to Energy Trends Australia collecting and using my personal information — including name, email, business name, ABN (if provided), and tool interests — to provide updates, marketing materials, and strategic product insights. My information will be securely stored and retained only as long as needed to deliver these services or until I withdraw consent. It won’t be shared with third parties except where legally required or with trusted service providers supporting Energy Trends communications. I understand I can access, correct, or withdraw my information at any time by contacting <a href="mailto:info@energytrends.au" class="text-indigo-600 underline">info@energytrends.au</a>. For privacy concerns, I may also contact the Office of the Australian Information Commissioner. Energy Trends Australia complies with the Australian Privacy Principles under the Privacy Act 1988.
+        </span>
+      </label>
+    </div>
+
+    <button type="submit" class="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">Submit</button>
   </form>
 </section>
+
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8 text-center">
+    <h2 class="text-2xl font-bold mb-4">Thanks for reaching out</h2>
+    <p class="text-gray-700 mb-6">We’ve received your message and will be in touch shortly.</p>
+    <a href="/" class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">Return to homepage</a>
+    <p class="mt-6 italic text-slate-400">Built for clarity, control, and strategic foresight—even in follow-up.</p>
+  </div>
+</div>
 
 <script>
 function toggleMessage() {
@@ -53,4 +77,20 @@ function toggleMessage() {
   const messageBox = document.getElementById('otherMessage');
   messageBox.style.display = interest.value === 'Other' ? 'block' : 'none';
 }
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdOfOj3LxhDWms_M08yyNFzyhPbPGZ2XcPj8XX4F-H65P8PvA/formResponse', {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors'
+  });
+
+  document.getElementById('confirmationModal').classList.remove('hidden');
+  form.reset();
+});
 </script>
