@@ -56,7 +56,13 @@ permalink: /contact.html
       </label>
     </div>
 
-    <button type="submit" class="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">Submit</button>
+    <div class="cta-buttons">
+  <a href="#" class="cta stacked-text" onclick="document.getElementById('contactForm').submit(); return false;">
+    <span class="cta-top">Submit</span>
+    <span class="cta-bottom estimate-ambient">Interest</span>
+  </a>
+</div>
+
   </form>
 
   <!-- Confirmation Modal -->
