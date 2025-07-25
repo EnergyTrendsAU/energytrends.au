@@ -11,29 +11,34 @@ permalink: /contact.html
   </header>
 
   <form id="contactForm" class="max-w-xl mx-auto grid gap-6">
+    <!-- Contact Name -->
     <div>
-      <label for="name" class="block font-medium">Contact Name</label>
-      <input type="text" name="entry.2005620554" id="name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Your name" />
+      <label for="contact-name" class="block font-medium">Contact Name</label>
+      <input type="text" name="entry.182920042" id="contact-name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Your name" required />
     </div>
 
+    <!-- Email -->
     <div>
       <label for="email" class="block font-medium">Email</label>
-      <input type="email" name="entry.1045781291" id="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="you@example.com" />
+      <input type="email" name="emailAddress" id="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="you@example.com" required />
     </div>
 
+    <!-- Business Name -->
     <div>
-      <label for="business" class="block font-medium">Business Name</label>
-      <input type="text" name="entry.1065046570" id="business" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Your business" />
+      <label for="business-name" class="block font-medium">Business Name</label>
+      <input type="text" name="entry.213535325" id="business-name" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Your business" required />
     </div>
 
+    <!-- ABN -->
     <div>
       <label for="abn" class="block font-medium">ABN (optional)</label>
-      <input type="text" name="entry.1166974658" id="abn" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="ABN" />
+      <input type="text" name="entry.728472015" id="abn" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="ABN" />
     </div>
 
+    <!-- Tool Interest -->
     <div>
-      <label for="interest" class="block font-medium">Tool Interest</label>
-      <select name="entry.839337160" id="interest" onchange="toggleMessage()" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900">
+      <label for="tools" class="block font-medium">Tool Interest</label>
+      <select name="entry.520525533" id="tools" onchange="toggleOther()" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" required>
         <option value="">Select one</option>
         <option value="Estimate Only">Estimate Only</option>
         <option value="Pulse Only">Pulse Only</option>
@@ -42,20 +47,16 @@ permalink: /contact.html
       </select>
     </div>
 
-    <div id="otherMessage" style="display:none;">
-      <label for="message" class="block font-medium">Tell us more (max 500 characters)</label>
-      <textarea name="entry.1166974659" id="message" maxlength="500" rows="5" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-500" placeholder="Additional details..."></textarea>
+    <!-- Other Response -->
+    <div id="otherResponse" style="display:none;">
+      <label for="other-text" class="block font-medium">Tell us more</label>
+      <input type="text" name="entry.520525533.other_option_response" id="other-text" maxlength="500" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-900" placeholder="Additional details..." />
     </div>
 
-    <div>
-      <label class="flex items-start gap-2">
-        <input type="checkbox" name="entry.839337161" class="mt-1" />
-        <span class="text-sm text-gray-700">
-          By submitting this form, I consent to Energy Trends Australia collecting and using my personal information — including name, email, business name, ABN (if provided), and tool interests — to provide updates, marketing materials, and strategic product insights. My information will be securely stored and retained only as long as needed to deliver these services or until I withdraw consent. It won’t be shared with third parties except where legally required or with trusted service providers supporting Energy Trends communications. I understand I can access, correct, or withdraw my information at any time by contacting <a href="mailto:info@energytrends.au" class="text-indigo-600 underline">info@energytrends.au</a>. For privacy concerns, I may also contact the Office of the Australian Information Commissioner. Energy Trends Australia complies with the Australian Privacy Principles under the Privacy Act 1988.
-        </span>
-      </label>
-    </div>
+    <!-- Consent -->
+    <input type="hidden" name="entry.1357301092" value="By submitting this form, I consent to Energy Trends Australia collecting and using my personal information — including name, email, business name, ABN (if provided), and tool interests — to provide updates, marketing materials, and strategic product insights. My information will be securely stored and retained only as long as needed to deliver these services or until I withdraw consent. It won’t be shared with third parties except where legally required or with trusted service providers supporting Energy Trends communications. I understand I can access, correct, or withdraw my information at any time by contacting info@energytrends.au. For privacy concerns, I may also contact the Office of the Australian Information Commissioner. Energy Trends Australia complies with the Australian Privacy Principles under the Privacy Act 1988.">
 
+    <!-- Submit CTA -->
     <div class="cta-buttons">
       <a href="#" class="cta stacked-text" onclick="document.getElementById('contactForm').submit(); return false;" role="button" aria-label="Submit form">
         <span class="cta-top">Submit</span>
@@ -64,7 +65,7 @@ permalink: /contact.html
     </div>
   </form>
 
-  <!-- Confirmation Modal -->
+  <!-- Confirmation -->
   <div id="confirmationModal" class="hidden max-w-xl mx-auto text-center mt-12">
     <h2 class="text-2xl font-bold mb-4">Thanks for reaching out</h2>
     <p class="text-gray-700 mb-6">We’ve received your message and will be in touch shortly.</p>
@@ -74,29 +75,23 @@ permalink: /contact.html
 </section>
 
 <script>
-function toggleMessage() {
-  const interest = document.getElementById('interest');
-  const messageBox = document.getElementById('otherMessage');
-  messageBox.style.display = interest.value === 'Other' ? 'block' : 'none';
+function toggleOther() {
+  const toolSelect = document.getElementById('tools');
+  const otherField = document.getElementById('otherResponse');
+  otherField.style.display = toolSelect.value === 'Other' ? 'block' : 'none';
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('confirmationModal').classList.add('hidden');
-});
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
+  const formData = new FormData(this);
 
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdOfOj3LxhDWms_M08yyNFzyhPbPGZ2XcPj8XX4F-H65P8PvA/formResponse', {
+  fetch('https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse', {
     method: 'POST',
     body: formData,
     mode: 'no-cors'
   });
 
-  form.style.display = 'none';
+  this.style.display = 'none';
   document.getElementById('confirmationModal').classList.remove('hidden');
 });
 </script>
